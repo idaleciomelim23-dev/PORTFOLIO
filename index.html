@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Idalécio Bernardo — Fotografia & Audiovisual</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--fg:#2b2b2b;--mut:#8a8a86;--line:#efeeea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--fg);font:300 16px/1.7 Inter,system-ui,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);display:flex;justify-content:space-between;align-items:center;padding:20px 5vw;background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+.logo{font:500 22px "Cormorant Garamond",Georgia,serif;letter-spacing:.04em;text-decoration:none;color:var(--fg)}
+nav{display:flex;gap:28px}
+nav a{color:var(--mut);text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:color .2s}
+nav a:hover{color:var(--fg)}
+.hero{padding:14vh 5vw 9vh;max-width:900px}
+.hero h1{font:400 clamp(38px,7vw,76px)/1.05 "Cormorant Garamond",Georgia,serif}
+.hero p{margin-top:22px;color:var(--mut);max-width:460px}
+.filters{display:flex;gap:22px;padding:0 5vw 28px;flex-wrap:wrap}
+.filters button{background:none;border:0;border-bottom:1px solid transparent;color:var(--mut);font:inherit;font-size:13px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:4px 0}
+.filters button.on{color:var(--fg);border-color:var(--fg)}
+.grid{columns:3 260px;column-gap:16px;padding:0 5vw}
+.ph{break-inside:avoid;margin-bottom:16px;position:relative;cursor:zoom-in;overflow:hidden}
+.ph .img{width:100%;transition:transform .6s}
+.ph:hover .img{transform:scale(1.03)}
+.ph span{position:absolute;left:14px;bottom:12px;color:#2b2b2b;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .3s;}
+.ph:hover span{opacity:1}
+section{padding:12vh 5vw 0;max-width:1100px}
+h2{font:400 34px "Cormorant Garamond",Georgia,serif;margin-bottom:18px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
+.about .img{aspect-ratio:4/5;background:linear-gradient(160deg,#efe8de,#d9cfc0)}
+.about p{color:var(--mut);margin-bottom:14px}
+.contact a{color:var(--fg);font:400 clamp(18px,3.4vw,32px) "Cormorant Garamond",Georgia,serif;border-bottom:1px solid var(--fg);text-decoration:none}
+.tl{list-style:none;padding:0}.tl li{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line)}.tl b{font-weight:400;color:var(--mut);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+footer{padding:12vh 5vw 6vh;color:var(--mut);font-size:12px;letter-spacing:.1em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+#lb{position:fixed;inset:0;background:rgba(255,255,255,.96);display:none;align-items:center;justify-content:center;z-index:10;cursor:zoom-out;padding:6vw}
+#lb.open{display:flex}
+#lb .img{width:min(88vw,900px);max-height:80vh;aspect-ratio:3/2}
+@media(max-width:700px){nav{gap:16px}.about{grid-template-columns:1fr}.grid{columns:2 140px;column-gap:10px}.ph{margin-bottom:10px}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="#">Idalécio Bernardo</a><nav><a href="#trabalhos">Trabalhos</a><a href="#sobre">Sobre</a><a href="#percurso">Percurso</a><a href="#contacto">Contacto</a></nav></header>
+
+<div class="hero"><h1>Reintegrar e redefinir tudo o que puder.</h1><p>Artista independente natural de Angola. Fotografia, vídeo, design e revelação digital para eventos, em Lisboa.</p></div>
+
+<div class="filters" id="filters" role="tablist">
+<button class="on" data-f="all">Tudo</button><button data-f="eventos">Eventos</button><button data-f="yearbook">Yearbook2k23</button><button data-f="video">Vídeo</button>
+</div>
+<div class="grid" id="trabalhos"></div>
+
+<section id="sobre"><div class="about"><div class="img"></div><div><h2>Sobre</h2><p>Estudante de cinema, fotógrafo e designer. Faço revelação digital para eventos e, em diferentes formas e segmentos artísticos e culturais, crio e adapto estéticas e conceitos audiovisuais.</p><p>Trabalho como editor/montador e fotógrafo freelancer. Integro o colectivo Zelu e a Associação Casa Courense, em Lisboa.</p></div></div></section>
+
+<section id="percurso"><h2>Percurso</h2><ul class="tl">
+<li><b>2023</b><span>Yearbook2k23 no Blocu Blocu — Fábrica do Braço de Prata, Lisboa</span></li>
+<li><b>2023</b><span>Yearbook2k23 no Covil — Casa Courense em Lisboa</span></li>
+<li><b>2023</b><span>Colectivo Zelu e Blocu Blocu — Hub Criativo do Beato, Lisboa</span></li>
+<li><b>2023</b><span>Integração no colectivo Zelu e na Associação Casa Courense em Lisboa</span></li>
+<li><b>2023</b><span>Organização de eventos do Covil: curadoria e convite de artistas</span></li>
+<li><b>2022</b><span>Fotografia e impressão no evento Sabura — The Blacker The Berry Project, Casa Iminente</span></li>
+<li><b>2022</b><span>Cobertura fotográfica do Festival Zelu, 1.ª edição — Associação Safra</span></li>
+<li><b>2022</b><span>Gravação e captação de áudio dos Ciclo Black — Largo Residências</span></li>
+<li><b>2022</b><span>Fundação do projecto "TOTÉ?"</span></li>
+<li><b>2021</b><span>Gravação do videoclip "Indecifrável", de Trynity — Lisboa</span></li>
+</ul>
+<h2 style="margin-top:56px">Prática</h2><ul class="tl">
+<li><b>Agora</b><span>Fotógrafo freelancer</span></li>
+<li><b>Agora</b><span>Editor/montador freelancer</span></li>
+<li><b>Antes</b><span>Aprendiz de tatuador: desenho de stencil e impressão</span></li>
+</ul></section>
+<section id="contacto" class="contact"><h2>Contacto</h2><a href="mailto:idaleciobernardowrk@gmail.com">idaleciobernardowrk@gmail.com</a></section>
+
+<footer><span>© 2026 Idalécio Bernardo</span><span>Lisboa · +244 936 145 676</span></footer>
+
+<div id="lb"><div class="img"></div></div>
+
+<script>
+// Substitui "bg" por url('foto.jpg') quando tiveres as tuas fotos
+var fotos=[
+{c:"eventos",h:340,bg:"linear-gradient(160deg,#e3ebee,#c4d2d6)"},
+{c:"yearbook",h:220,bg:"linear-gradient(160deg,#ebe7e3,#d3cdc7)"},
+{c:"video",h:300,bg:"linear-gradient(160deg,#f4e8da,#e2c9ae)"},
+{c:"eventos",h:260,bg:"linear-gradient(160deg,#ece7ef,#d4cbd9)"},
+{c:"yearbook",h:380,bg:"linear-gradient(160deg,#e6ede3,#c9d5c5)"},
+{c:"video",h:240,bg:"linear-gradient(160deg,#eaeff3,#cdd8e1)"},
+{c:"eventos",h:320,bg:"linear-gradient(160deg,#f3ebe5,#e0cfc4)"},
+{c:"yearbook",h:260,bg:"linear-gradient(160deg,#eeeddf,#d9d6bd)"},
+{c:"video",h:350,bg:"linear-gradient(160deg,#efe8de,#d9cfc0)"}
+];
+var g=document.getElementById("trabalhos"),lb=document.getElementById("lb");
+fotos.forEach(function(f,i){
+var d=document.createElement("div");d.className="ph";d.dataset.c=f.c;
+d.innerHTML='<div class="img" style="height:'+f.h+'px;background:'+f.bg+';background-size:cover;background-position:center"></div><span>'+f.c+' · 0'+(i+1)+'</span>';
+d.onclick=function(){lb.firstChild.style.background=f.bg;lb.firstChild.style.backgroundSize="cover";lb.classList.add("open")};
+g.appendChild(d)});
+lb.onclick=function(){lb.classList.remove("open")};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("open")});
+document.getElementById("filters").onclick=function(e){
+var b=e.target.closest("button");if(!b)return;
+this.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});
+g.querySelectorAll(".ph").forEach(function(p){p.style.display=(b.dataset.f==="all"||p.dataset.c===b.dataset.f)?"":"none"})};
+</script>
+</body>
+</html>
